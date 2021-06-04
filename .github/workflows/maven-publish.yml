@@ -34,7 +34,7 @@ jobs:
       run: VERSION=${github_ref#"refs/tags/"} && echo ${VERSION}
 
     - name: set project version
-      run: echo ${VERSION} && mvn versions:set versions:commit -DnewVersion=${VERSION}
+      run: echo ${VERSION} && mvn -B versions:set versions:commit -DnewVersion=${VERSION} -f pom.xml
 
     - name: Build with Maven
       run: mvn -B package --file pom.xml
