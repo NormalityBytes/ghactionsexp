@@ -31,7 +31,7 @@ jobs:
       run: echo $GITHUB_REF
 
     - name: convert Release Reference to version
-      run: VERSION=${github_ref#"refs/tags/"} && echo ${VERSION}
+      run: VERSION=${GITHUB_REF#"refs/tags/"} && echo ${VERSION}
 
     - name: set project version
       run: echo ${VERSION} && mvn -B versions:set versions:commit -DnewVersion=${VERSION} -f pom.xml
