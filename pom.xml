@@ -7,7 +7,7 @@
     <groupId>com.spirittesting.github.actions</groupId>
     <artifactId>experiment-parent</artifactId>
     <packaging>pom</packaging>
-    <version>1.0.0</version>
+    <version>1.0.1</version>
     <modules>
         <module>moduleA</module>
         <module>moduleB</module>
