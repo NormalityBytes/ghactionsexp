@@ -33,6 +33,9 @@ jobs:
         server-username: MAVEN_USERNAME # env variable for username in deploy
         server-password: MAVEN_PASSWORD # env variable for token in deploy
 
+    - name: Echo Github Reference
+      run: echo $GITHUB_REF ${{ GITHUB_REF }}
+
     - name: Build with Maven
       run: mvn -B package --file pom.xml
 
